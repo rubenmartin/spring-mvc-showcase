@@ -1,0 +1,10 @@
+language: java
+
+mvn test
+mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+notifications:
+  email:
+    - rmartinramos@soldevelo.com
+  on_success: always # default: change
+  on_failure: always # default: always
