@@ -1,10 +1,9 @@
 language: java
-
-mvn test
-mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-
+jdk:
+ - openjdk7
+script:
+ - mvn clean install -Dmaven.test.skip=true
+after_success:
+after_failure:
 notifications:
-  email:
-    - rmartinramos@soldevelo.com
-  on_success: always # default: change
-  on_failure: always # default: always
+email: false
